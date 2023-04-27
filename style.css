@@ -21,16 +21,15 @@
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    background-color: var(--main);
     display: grid;
     place-items: center;
     height: 100vh;
+    background: linear-gradient(135deg, var(--gradiente1), var(--gradiente2));
 }
 
 .main-container {
     width: 375px;
     height: 800px;
-    background-color: var(--gradiente2);
 }
 
 .logo-container {
@@ -74,6 +73,7 @@ form {
     height: 50px;
     position: relative;
 }
+
 
 form .input {
     /* background-image: url(./images/icon-error.svg);  */
@@ -143,11 +143,13 @@ form .button {
         height: 100vh;
         position: relative;
         background-image: url(./images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: calc(100% - 500px) ;
     }
 
     .logo-container {
         width: 160px;
-        margin: 40px 0 50px 120px;
+        margin: 40px 0 70px 120px;
     }
 
     .img-container {
@@ -161,20 +163,20 @@ form .button {
     }
 
     .details-container .title {
+        line-height: 70px;
         margin: 0;
-        font-size: 4em;
+        font-size: 3.5em;
         width: calc(100% - 490px);
         padding: 0 270px 0 120px;
         text-align: left;
     }
 
     .details-container .description {
-        margin: 20px 0;
+        margin: 30px 0;
         font-size: 1em;
-        width: calc(100% - 490px);
+        width: calc(100% - 550px);
         padding: 0 270px 0 120px;
         text-align: left;
-        line-height: 30px;
     }
 
 
@@ -182,16 +184,23 @@ form .button {
         margin: 20px 120px;
         right: none;
         font-size: 1em;
-        width: 400px;
+        width: 450px;
         text-align: left;
+        z-index: 2;
     }
 
     .details-container form .input {
+        background-color: transparent;
         font-size: 1em;
         font-family: 'Josefin Sans', sans-serif;
         color: #333;
         width: 100%;
-        background-position: 300px;
+        background-position: 330px;
+    }
+
+    .details-container form .button {
+        width: 80px;
+        padding: 14px 30px;
     }
 
     .details-container form .error {
